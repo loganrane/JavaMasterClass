@@ -13,6 +13,9 @@ public class MultipleCatchBlocks {
             }
             catch(ArrayIndexOutOfBoundsException e){
                 System.out.println("No matching element found");
+            } finally {
+                // This will always be running.
+                System.out.println("Running")
             }
         }
     }
