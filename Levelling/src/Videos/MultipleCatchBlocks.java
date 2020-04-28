@@ -15,7 +15,7 @@ public class MultipleCatchBlocks {
                 System.out.println("No matching element found");
             } finally {
                 // This will always be running.
-                System.out.println("Running")
+                System.out.println("Running");
             }
         }
     }
