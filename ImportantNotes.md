@@ -8,3 +8,13 @@ Scanner sc = new Scanner(System.in);
             String s = new String(sc.nextLine());
         }
 ````
+
+**Exception in Java**
+>Handling an exception in java.
+````
+    try{
+             
+    } catch (Exception e){
+        // System.out.println("Exception : " + e.getMessage());
+    }
+````
