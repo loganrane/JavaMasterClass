@@ -18,3 +18,10 @@ Scanner sc = new Scanner(System.in);
         // System.out.println("Exception : " + e.getMessage());
     }
 ````
+
+**Sorting in Java**
+>STL to sort an array in java.
+
+````
+Arrays.sort(arr);
+````
