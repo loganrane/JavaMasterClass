@@ -2,7 +2,7 @@ package Abstract;
 
 interface AccountInter {
     void create (int accNo, String name, double accBal);
-    double delete (int accNo);
+    void delete (int accNo);
     void print(int accNo);
 }
 
@@ -20,7 +20,7 @@ class Account implements AccountInter{
     public void create (int accNo, String name, double accBal){
 
     }
-    public double delete (int accNo){
+    public void delete (int accNo){
 
     }
     public void print(int accNo){
