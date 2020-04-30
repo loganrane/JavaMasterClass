@@ -1,6 +1,7 @@
 package LambdaFunctions;
 
 import java.util.*;
+import java.util.stream.Stream;
 
 class Product {
     int id;
@@ -63,10 +64,14 @@ public class LambdaL {
             System.out.println(p.id+" "+p.name+" "+p.price);
         }
 
+        // Streams filtering
+        Stream<Product> filteredData = list.stream().filter(
+                product -> product.price > 1000
+        );
 
-
-
-
+        filteredData.forEach(
+                (product -> System.out.println(product.name + " " + product.price))
+        );
 
 
 //        Drawable drawable = new Drawable() {
