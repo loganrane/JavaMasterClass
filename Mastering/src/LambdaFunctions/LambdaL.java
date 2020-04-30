@@ -45,8 +45,7 @@ public class LambdaL {
 
         Speakable speakable = message -> {
             String message1 = "Hello";
-            String message2 = message + message1 + " Another message";
-            return message2;
+            return message + message1 + " Another message";
         };
         System.out.println(speakable.speak("here it goes! "));
 
