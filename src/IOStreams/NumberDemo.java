@@ -61,9 +61,9 @@ public class NumberDemo {
         // Storing the data in even.txt
         String file_path_even = "C:\\Users\\lenovo\\Desktop\\GitBlaze\\JavaMasterClass\\src\\even.txt";
         File file_even = new File(file_path_even);
-        try(FileWriter output_even = new FileWriter(file_odd)){
+        try(FileWriter output_even = new FileWriter(file_even)){
             output_even.write(odd.toString());
-            System.out.println("Even numbers is recorded in odd.txt.");
+            System.out.println("Even numbers is recorded in even.txt.");
         } catch (IOException e){
             e.printStackTrace();
         }
