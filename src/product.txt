@@ -5,3 +5,6 @@
 198, Mouse, 200
 218, Keyboard, 300
 789, Laptop, 3000
+187, Headphones, 230
+356, Monitor, 700
+448, Clock, 20

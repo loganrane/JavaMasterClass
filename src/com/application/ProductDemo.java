@@ -12,6 +12,21 @@ public class ProductDemo {
         // Initializing the array of products
         Product[] products = new Product[10];
 
+        // Product initialization // Find a way to do this automatically. Maybe try with loop.
+        products[0] = new Product();
+        products[1] = new Product();
+        products[2] = new Product();
+        products[3] = new Product();
+        products[4] = new Product();
+        products[5] = new Product();
+        products[6] = new Product();
+        products[7] = new Product();
+        products[8] = new Product();
+        products[9] = new Product();
+
+        // Product initialization
+
+
         // Loading the file
         String path_file = "C:\\Users\\lenovo\\Desktop\\GitBlaze\\JavaMasterClass\\src\\product.txt";
         File file_products = new File(path_file);
@@ -40,9 +55,7 @@ public class ProductDemo {
 
         // Printing the list of products.
         for(int i=0; i<number_of_products; i++){
-            System.out.println("Product - Number: " + products[i].getProdNo() + " | Name: " + products[i].getProdName() + " | Price: " + products[i].getProdPrice());
+            System.out.println("Product - Number: " + products[i].getProdNo() + " | Name: " + products[i].getProdName() + " | Price: Rs. " + products[i].getProdPrice());
         }
-
-
     }
 }
