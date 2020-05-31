@@ -36,12 +36,31 @@ public class CopyFile {
             System.out.println("File not found inside the folder.");
         }
 
-        try (FileWriter ouput_dest = new FileWriter(dest_file)){
-
+        if(dest_file.exists()){
+            System.out.print("Do you want to overwrite the file? yes / no : ");
+            String ans = sc.nextLine();
+            if(ans.equals("yes")){
+                // Overwriting the data.
+                try(FileWriter output_dest = new FileWriter(dest_file)){
+                    output_dest.write(String.valueOf(content_source));
+                    output_dest.close();
+                    System.out.println("Data overwritten in the file.");
+                } catch (IOException e){
+                    e.printStackTrace();
+                }
+            }
+            else{
+                // Nothing to do now.
+                System.out.println("Exiting without writing.");
+            }
+        } else{
+            try(FileWriter output_dest = new FileWriter(dest_file)){
+                output_dest.write(String.valueOf(content_source));
+                output_dest.close();
+                System.out.println("File successfully created and data is stored there.");
+            } catch (IOException e){
+                e.printStackTrace();
+            }
         }
-
-
-
-
     }
 }
