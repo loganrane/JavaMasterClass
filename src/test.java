@@ -1,12 +1,14 @@
+import java.util.Scanner;
+
 public class test {
-
-    public static int fun(int x){
-        byte y = (byte) x;
-        return y;
-    }
-
-    
     public static void main(String[] args) {
-        System.out.println("chaef" + fun(493));
+        int a, b, c;
+        Scanner sc = new Scanner(System .in);
+        for(int i=0;i<3;i++){
+            a = sc.nextInt();
+            b = sc.nextInt();
+            c = a + b;
+            System.out.println(c);
+        }
     }
 }
