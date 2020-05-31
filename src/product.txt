@@ -1,0 +1,7 @@
+123, Lux, 20
+253, Lifebouy, 10
+122, Dettol, 25
+101, Window, 250
+198, Mouse, 200
+218, Keyboard, 300
+789, Laptop, 3000
