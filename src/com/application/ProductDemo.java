@@ -6,26 +6,19 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class ProductDemo {
     public static void main(String[] args) throws IOException {
+        Scanner sc = new Scanner(System.in);
+
         // Initializing the array of products
         Product[] products = new Product[10];
 
-        // Product initialization // Find a way to do this automatically. Maybe try with loop.
-        products[0] = new Product();
-        products[1] = new Product();
-        products[2] = new Product();
-        products[3] = new Product();
-        products[4] = new Product();
-        products[5] = new Product();
-        products[6] = new Product();
-        products[7] = new Product();
-        products[8] = new Product();
-        products[9] = new Product();
-
-        // Product initialization
-
+        // Product initialization to have them made as object.
+        for(int i=0; i<10; i++){
+            products[i] = new Product();
+        }
 
         // Loading the file
         String path_file = "C:\\Users\\lenovo\\Desktop\\GitBlaze\\JavaMasterClass\\src\\product.txt";
@@ -56,6 +49,34 @@ public class ProductDemo {
         // Printing the list of products.
         for(int i=0; i<number_of_products; i++){
             System.out.println("Product - Number: " + products[i].getProdNo() + " | Name: " + products[i].getProdName() + " | Price: Rs. " + products[i].getProdPrice());
+        }
+
+        System.out.println();
+        // 1st query
+        System.out.print("Enter the price : ");
+        double price_min = sc.nextDouble();
+        System.out.println("Product details having price less than : " + price_min);
+        for(int i=0; i<number_of_products; i++){
+            if(products[i].getProdPrice() < price_min){
+                System.out.println("Product - Number: " + products[i].getProdNo() + " | Name: " + products[i].getProdName() + " | Price: Rs. " + products[i].getProdPrice());
+            }
+        }
+
+        sc.nextLine();
+        System.out.println();
+        // 2nd query
+        System.out.print("Enter the name : ");
+        String name_product = "";
+        name_product = sc.nextLine();
+        boolean flag = false;
+        for(int i=0; i<number_of_products; i++){
+            if(products[i].getProdName().equals(name_product)){
+                System.out.println("Product - Number: " + products[i].getProdNo() + " | Name: " + products[i].getProdName() + " | Price: Rs. " + products[i].getProdPrice());
+                flag = true;
+            }
+        }
+        if(!flag){
+            System.out.println("Product not found.");
         }
     }
 }
