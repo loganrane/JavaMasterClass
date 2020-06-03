@@ -47,7 +47,7 @@ class InvalidPhoneException extends  Exception{}
 
 
 public class TestCustomer {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvalidCustNoException {
         System.out.println("Enter customer details : ");
         Scanner sc = new Scanner(System.in);
         int id = sc.nextInt();
